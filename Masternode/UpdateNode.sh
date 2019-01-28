@@ -26,5 +26,6 @@ sleep 10
 make install-strip
 cd ~
 rm $latestrelease.zip
+rm -rf $file
 reboot
 fi
