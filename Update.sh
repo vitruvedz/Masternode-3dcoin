@@ -347,8 +347,7 @@ read_options(){
 		
 	
 		3) exit 0;;
-		*) echo -e "${RED} Please choose the right choice... ${STD}" && sleep 2  
-	    esac
+
 }
 
 while true
