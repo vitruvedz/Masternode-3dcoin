@@ -31,7 +31,7 @@ read -p "Same SSH Port and Password for all vps's? (Y/N)" -n 1 -r
 echo ""   # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 sleep 2
-echo  -e "Please enter your vps ip's: ${RED}(Exemple:111.111.111.111 222.222.222.222 ...)${STD}"
+echo  -e "Please enter your vps ip's: ${RED}( Exemple: 111.111.111.111 222.222.222.222 ... )${STD}"
 
 read -p "IP HERE: " ip
 
@@ -74,7 +74,7 @@ done
 elif [[ $REPLY =~ ^[Nn]$ ]]; then
 
 sleep 2
-echo  -e "Please enter your vps's data: 'Host:Password:SSHPort' ${RED}(Exemple:111.111.111.111:ERdX5h64dSer:22 222.222.222.222:Wz65D232Fty:165 ...)${STD}"
+echo  -e "Please enter your vps's data: 'Host:Password:SSHPort' ${RED}( Exemple: 111.111.111.111:ERdX5h64dSer:22 222.222.222.222:Wz65D232Fty:165 ... )${STD}"
 
 read -p "DATA HERE: " ip
 
@@ -87,7 +87,7 @@ pass=${array[1]}
 port=${array[2]}
 if [ -z "$pass" ] || [ -z "$port" ] || [ -z "$host" ]
 then
-echo -e "Please enter a correct vps's data ${RED}(Exemple:111.111.111.111:ERdX5h64dSer:22 222.222.222.222:Wz65D232Fty:165 ...)${STD}"
+echo -e "Please enter a correct vps's data ${RED}( Exemple: 111.111.111.111:ERdX5h64dSer:22 222.222.222.222:Wz65D232Fty:165 ... )${STD}"
 else
 echo  ""  # (optional) move to a new line
 echo  ""  # (optional) move to a new line
