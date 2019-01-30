@@ -47,6 +47,7 @@ read_options(){
 			rm -f /usr/local/bin/check.sh
 			rm -f /usr/local/bin/update.sh
 			rm -f /usr/local/bin/UpdateNode.sh
+			rm -rf /usr/local/bin/Masternode
 			echo ""
 			cd ~
 			echo  -e "${GREEN} Get latest release                ${STD}"
@@ -142,6 +143,7 @@ read_options(){
         rm -f /usr/local/bin/check.sh
         rm -f /usr/local/bin/update.sh
         rm -f /usr/local/bin/UpdateNode.sh
+		rm -rf /usr/local/bin/Masternode
         echo ""
         echo "-----------------------------------------------------"
         echo  -e "${GREEN} Git checkout master               ${STD}"
@@ -233,6 +235,7 @@ read_options(){
 			rm -f /usr/local/bin/check.sh
 			rm -f /usr/local/bin/update.sh
 			rm -f /usr/local/bin/UpdateNode.sh
+			rm -rf /usr/local/bin/Masternode
 			echo ""
 			cd ~
 			echo  -e "${GREEN} Stop Cron                         ${STD}" 
@@ -304,6 +307,7 @@ read_options(){
 			rm -f /usr/local/bin/check.sh
 			rm -f /usr/local/bin/update.sh
 			rm -f /usr/local/bin/UpdateNode.sh
+			rm -rf /usr/local/bin/Masternode
 			cd ~
 			echo ""
 			echo "-----------------------------------------------------"
