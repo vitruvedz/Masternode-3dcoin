@@ -1,0 +1,110 @@
+#!/bin/bash
+RED='\033[0;97;41m'
+STD='\033[0;0;39m'
+GREEN='\e[1;97;42m'
+BLUE='\e[1;97;44m'
+YELLOW='\033[0;33m'
+NC='\033[0m' # No Color
+
+function valid_ip()
+{
+    local  ip=$1
+    local  stat=1
+
+    if [[ $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+        OIFS=$IFS
+        IFS='.'
+        ip=($ip)
+        IFS=$OIFS
+        [[ ${ip[0]} -le 255 && ${ip[1]} -le 255 \
+            && ${ip[2]} -le 255 && ${ip[3]} -le 255 ]]
+        stat=$?
+    fi
+    return $stat
+}
+
+clear
+echo "" 
+echo  -e "${BLUE} C H E C K  3 D C O I N  M A S T E R N O D E S ${STD}"
+echo "" 
+read -p "Same SSH Port and Password for all vps's? (Y/N)" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+
+sleep 2
+echo  -e "Please enter your vps ip's: ${RED}(Exemple:111.111.111.111 222.222.222.222 ...)${STD}"
+
+read -p "IP HERE: " ip
+
+unset port
+while [ -z ${port} ]; do
+read -p "SSH PORT: " port
+done
+
+unset rootpass
+while [ -z ${rootpass} ]; do
+read -s -p "PASSWORD: " rootpass
+done
+
+for i in $ip
+do
+if valid_ip $i; 
+then 
+
+echo    # (optional) move to a new line
+echo    # (optional) move to a new line
+echo  -e "${GREEN} Connexion Vps ip $i ${STD}\n" 
+echo  -e "${RED} 3DCoin Core Vps ip $i Data          ${STD}"
+sshpass -p $rootpass ssh -p$port -o StrictHostKeyChecking=no root@$i "
+printf '${YELLOW}3DCoin Core Last Block: ${NC}'
+3dcoin-cli getblockcount
+printf '${YELLOW}3DCoin Core RPC client version: ${NC}' 
+3dcoin-cli -version | awk -F'"' '"' '"'{print $NF}'"' | cut -d '-' -f1
+printf '${RED} ------------------------------------------------ ${STD}\n' 
+echo '' 
+echo ''
+sleep 5"
+
+else 
+echo "" 
+echo "" 
+echo -e "${RED} $i invalid IP ................... ${STD}"
+fi
+
+done
+elif [[ $REPLY =~ ^[Nn]$ ]]; then
+
+sleep 2
+echo  -e "Please enter your vps's data: 'Host:Password:SSHPort' ${RED}(Exemple:111.111.111.111:ERdX5h64dSer:22 222.222.222.222:Wz65D232Fty:165 ...)${STD}"
+
+read -p "DATA HERE: " ip
+
+for i in $ip
+do
+vpsdata=$(echo $i | tr ":" "\n")
+declare -a array=($vpsdata)
+host=${array[0]}
+pass=${array[1]}
+port=${array[2]}
+if [ -z "$pass" ] || [ -z "$port" ] || [ -z "$host" ]
+then
+echo -e "Please enter a correct vps's data ${RED}(Exemple:111.111.111.111:ERdX5h64dSer:22 222.222.222.222:Wz65D232Fty:165 ...)${STD}"
+else
+echo    # (optional) move to a new line
+echo    # (optional) move to a new line
+echo  -e "${GREEN} Connexion Vps ip $host ${STD}\n" 
+echo  -e "${RED} 3DCoin Core Vps ip $host Data          ${STD}"
+sshpass -p $pass ssh -p$port -o StrictHostKeyChecking=no root@$host "
+printf '${YELLOW}3DCoin Core Last Block: ${NC}'
+3dcoin-cli getblockcount
+printf '${YELLOW}3DCoin Core RPC client version: ${NC}' 
+3dcoin-cli -version | awk -F'"' '"' '"'{print $NF}'"' | cut -d '-' -f1
+printf '${RED} ------------------------------------------------ ${STD}\n' 
+echo '' 
+echo ''
+sleep 5"
+fi
+done
+else
+exit;
+fi
