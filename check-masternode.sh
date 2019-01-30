@@ -28,7 +28,7 @@ echo ""
 echo  -e "${BLUE} C H E C K  3 D C O I N  M A S T E R N O D E S ${STD}"
 echo "" 
 read -p "Same SSH Port and Password for all vps's? (Y/N)" -n 1 -r
-if [[ $REPLY =~ ^[Yy]$ ]];
+if [[ $REPLY =~ ^[Yy]$ ]]
 then
 echo "" 
 sleep 2
