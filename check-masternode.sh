@@ -28,9 +28,8 @@ echo ""
 echo  -e "${BLUE} C H E C K  3 D C O I N  M A S T E R N O D E S ${STD}"
 echo "" 
 read -p "Same SSH Port and Password for all vps's? (Y/N)" -n 1 -r
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-echo "" 
+echo ""   # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]; then
 sleep 2
 echo  -e "Please enter your vps ip's: ${RED}(Exemple:111.111.111.111 222.222.222.222 ...)${STD}"
 
@@ -51,8 +50,8 @@ do
 if valid_ip $i; 
 then 
 
-echo "" # (optional) move to a new line
-echo "" # (optional) move to a new line
+echo ""   # (optional) move to a new line
+echo ""   # (optional) move to a new line
 echo  -e "${GREEN} Connexion Vps ip $i ${STD}\n" 
 echo  -e "${RED} 3DCoin Core Vps ip $i Data          ${STD}"
 sshpass -p $rootpass ssh -p$port -o StrictHostKeyChecking=no root@$i "
