@@ -29,7 +29,7 @@ echo  -e "${BLUE} C H E C K  3 D C O I N  M A S T E R N O D E S ${STD}"
 echo "" 
 read -p "Same SSH Port and Password for all vps's? (Y/N)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-echo ""
+echo "" 
 sleep 2
 echo  -e "Please enter your vps ip's: ${RED}(Exemple:111.111.111.111 222.222.222.222 ...)${STD}"
 
