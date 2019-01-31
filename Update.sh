@@ -81,6 +81,8 @@ read_options(){
 			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/UpdateNode.sh
 			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/clearlog.sh
 			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/Version
+			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/update.log
+            chmod 755 update.log
             chmod 755 UpdateNode.sh
             chmod 755 Check-scripts.sh
             chmod 755 Update-scripts.sh
@@ -186,7 +188,9 @@ read_options(){
 		wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/UpdateNode.sh
 		wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/clearlog.sh
 		wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/Version
-        chmod 755 UpdateNode.sh
+        wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/update.log
+        chmod 755 update.log
+		chmod 755 UpdateNode.sh
         chmod 755 Check-scripts.sh
         chmod 755 Update-scripts.sh
         chmod 755 clearlog.sh
@@ -251,6 +255,8 @@ read_options(){
 			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/UpdateNode.sh
 			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/clearlog.sh
 			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/Version
+			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/update.log
+            chmod 755 update.log
 			chmod 755 UpdateNode.sh
 			chmod 755 Check-scripts.sh
 			chmod 755 Update-scripts.sh
@@ -327,6 +333,8 @@ read_options(){
 			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/UpdateNode.sh
 			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/clearlog.sh
 			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/Version
+			wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/update.log
+            chmod 755 update.log
 			chmod 755 UpdateNode.sh
 			chmod 755 Check-scripts.sh
 			chmod 755 Update-scripts.sh
