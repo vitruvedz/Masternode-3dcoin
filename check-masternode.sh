@@ -5,6 +5,8 @@ GREEN='\e[1;97;42m'
 BLUE='\e[1;97;44m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
+LOG='Masternodes-check.log'
+dt=`date '+%d/%m/%Y %H:%M:%S'`
 
 function valid_ip()
 {
@@ -49,7 +51,7 @@ read -s -p "PASSWORD: " rootpass
 done
 
 vpsip=$(echo $ip | tr "-" " ")
-
+echo > $LOG
 for i in $vpsip
 do
 if valid_ip $i; 
@@ -59,6 +61,7 @@ echo ""   # (optional) move to a new line
 echo ""   # (optional) move to a new line
 echo  -e "${GREEN} Connexion Vps ip $i ${STD}\n" 
 echo  -e "${RED} 3DCoin Core Vps ip $i Data          ${STD}"
+
 sshpass -p $rootpass ssh -p$port -o StrictHostKeyChecking=no root@$i "
 printf '${YELLOW}3DCoin Core Last Block: ${NC}'
 3dcoin-cli getblockcount
@@ -66,8 +69,19 @@ printf '${YELLOW}3DCoin Core RPC client version: ${NC}'
 3dcoin-cli -version | awk -F'"' '"' '"'{print $NF}'"' | cut -d '-' -f1
 printf '${RED} ------------------------------------------------ ${STD}\n' 
 echo '' 
-echo ''
-sleep 5"
+sleep 2
+exit;"
+
+sshpass -p $rootpass ssh -p$port -o StrictHostKeyChecking=no root@$i "
+echo '[$dt]    ==============================================================' 
+echo '[$dt]==> Info: Vps ip: $i                                              '
+echo '[$dt]    =============================================================='
+printf '[$dt]==> Info: 3DCoin Core Last Block: $blook'; 3dcoin-cli getblockcount
+printf '[$dt]==> Info: 3DCoin Core RPC client version: '; 3dcoin-cli -version | awk -F'"' '"' '"'{print $NF}'"' | cut -d '-' -f1
+echo '[$dt]    =============================================================='
+echo '' 
+sleep 2
+exit;" >> $LOG
 
 else 
 echo "" 
@@ -87,7 +101,7 @@ read -p "DATA HERE: " ip
 done
 
 data=$(echo $ip | tr "-" " ")
-
+echo > $LOG
 for i in $data
 do
 vpsdata=$(echo $i | tr ":" "\n")
@@ -110,8 +124,19 @@ printf '${YELLOW}3DCoin Core RPC client version: ${NC}'
 3dcoin-cli -version | awk -F'"' '"' '"'{print $NF}'"' | cut -d '-' -f1
 printf '${RED} ------------------------------------------------ ${STD}\n' 
 echo '' 
-echo ''
-sleep 5"
+sleep 2
+exit;"
+
+sshpass -p $pass ssh -p$port -o StrictHostKeyChecking=no root@$host "
+echo '[$dt]    ==============================================================' 
+echo '[$dt]==> Info: Vps ip: $host                                              '
+echo '[$dt]    =============================================================='
+printf '[$dt]==> Info: 3DCoin Core Last Block: $blook'; 3dcoin-cli getblockcount
+printf '[$dt]==> Info: 3DCoin Core RPC client version: '; 3dcoin-cli -version | awk -F'"' '"' '"'{print $NF}'"' | cut -d '-' -f1
+echo '[$dt]    =============================================================='
+echo '' 
+sleep 2
+exit;" >> $LOG
 fi
 done
 else
