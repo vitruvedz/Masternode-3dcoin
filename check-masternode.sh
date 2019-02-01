@@ -31,9 +31,12 @@ read -p "Same SSH Port and Password for all vps's? (Y/N)" -n 1 -r
 echo ""   # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 sleep 2
-echo  -e "Please enter your vps ip's: ${RED}( Exemple: 111.111.111.111 222.222.222.222 ... )${STD}"
+echo  -e "Please enter your vps ip's: ${RED}( Exemple: 111.111.111.111-222.222.222.222-... )${STD}"
 
+unset ip
+while [ -z ${ip} ]; do
 read -p "IP HERE: " ip
+done
 
 unset port
 while [ -z ${port} ]; do
@@ -45,7 +48,9 @@ while [ -z ${rootpass} ]; do
 read -s -p "PASSWORD: " rootpass
 done
 
-for i in $ip
+vpsip=$(echo $ip | tr "-" " ")
+
+for i in $vpsip
 do
 if valid_ip $i; 
 then 
@@ -74,11 +79,16 @@ done
 elif [[ $REPLY =~ ^[Nn]$ ]]; then
 
 sleep 2
-echo  -e "Please enter your vps's data: 'Host:Password:SSHPort' ${RED}( Exemple: 111.111.111.111:ERdX5h64dSer:22 222.222.222.222:Wz65D232Fty:165 ... )${STD}"
+echo  -e "Please enter your vps's data: 'Host:Password:SSHPort' ${RED}( Exemple: 111.111.111.111:ERdX5h64dSer:22-222.222.222.222:Wz65D232Fty:165-... )${STD}"
 
+unset ip
+while [ -z ${ip} ]; do
 read -p "DATA HERE: " ip
+done
 
-for i in $ip
+data=$(echo $ip | tr "-" " ")
+
+for i in $data
 do
 vpsdata=$(echo $i | tr ":" "\n")
 declare -a array=($vpsdata)
