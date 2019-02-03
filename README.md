@@ -37,15 +37,15 @@ bash Update.sh
 -----------------------------------------------------------------
 This option make update 3dcoin core & script update in your vps & always you can use a single update or multi update: 
 
-  **1.1-Update Single Masternode:**
+ > ##### 1.1-Update Single Masternode:
   
     This option update only local vps where you run this shell.
     
-  **1.2- Update Multi Masternode**
+ > ##### 1.2- Update Multi Masternode
   
     This option update multi vps's and with 2 options to:
     
-      1.2.1. Use Same SSH Port and Password for all vps's:
+       1.2.1. Use Same SSH Port and Password for all vps's:
       
              Enter your vps ip's: (Exemple: 111.111.111.111-222.222.222.222-... )
              
@@ -53,7 +53,7 @@ This option make update 3dcoin core & script update in your vps & always you can
              
              password: (Exemple: Des53G2v3P )
              
-      1.2.2. Not Same SSH Port and Password for all vps's:
+       1.2.2. Not Same SSH Port and Password for all vps's:
       
              Eter your vps's data: 'Host:Password:SSHPort' ( Exemple: 111.111.111.111:ERdX5h64dSer:22-222.222.222.222:Wz65D232Fty:165-... )
              
@@ -61,11 +61,11 @@ This option make update 3dcoin core & script update in your vps & always you can
 -------------------------------------------------------------
 This option make update only scripts in your vps & always you can use a single update or multi update: 
 
-  ##### 2.1-Update Single Masternode:
+ > ##### 2.1-Update Single Masternode:
   
     This option update only local vps where you run this shell.
     
-  ##### 2.2- Update Multi Masternode
+ > ##### 2.2- Update Multi Masternode
   
     This option update multi vps's and with 2 options to:
     
