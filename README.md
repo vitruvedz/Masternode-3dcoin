@@ -88,8 +88,8 @@ This option to close Shell script.
 
 
 ****************************************
-Check 3DCoin masternode
-****************************************
+### Bash Checker for Masternodes on Ubuntu 16.04 LTS x64 <This script must be run as root user!>
+***************************************
 
 ```
 curl -O https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/check-masternode.sh > check-masternode.sh
