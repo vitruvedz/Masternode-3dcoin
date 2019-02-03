@@ -6,6 +6,7 @@ LANG=en_US.UTF-8
 SHELL=/bin/sh
 PWD=/root
 3dcoin-cli getblockcount > /usr/local/bin/Masternode/blockcount
+sleep 2
 previousBlock=$(cat /usr/local/bin/Masternode/blockcount)
 currentBlock=$(3dcoin-cli getblockcount)
 
