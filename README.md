@@ -1,7 +1,7 @@
 # Masternode-3dcoin
 
 ****************************************
-**Bash Updater for masternode on Ubuntu 16.04 LTS x64 < This script must be run as root user! >**
+### Bash Updater for masternode on Ubuntu 16.04 LTS x64 <This script must be run as root user!>
 ****************************************
  > **Version: 1.0.1:**
 * Add Automatique update for scripts.
@@ -29,21 +29,21 @@ bash Update.sh
 
 > **List of options:**
 
-1. Update Masternode & Auto-update script
-2. Update only Auto-update script
-3. Exit
+1. **Update Masternode & Auto-update script**
+2. **Update only Auto-update script**
+3. **Exit**
 
 **1. Update Masternode & Auto-update script:**
+-----------------------------------------------------------------
+This option make update 3dcoin core & script update in your vps & always you can use a single update or multi update: 
 
-this option make update 3dcoin core & script update in your vps & always you can use a single update or multi update: 
-
-  **1.1- Update Single Masternode:**
+  **1.1-Update Single Masternode:**
   
-    this option update only local vps where you run this shell.
+    This option update only local vps where you run this shell.
     
   **1.2- Update Multi Masternode**
   
-    this option update multi vps's and with 2 options to:
+    This option update multi vps's and with 2 options to:
     
       1.2.1. Use Same SSH Port and Password for all vps's:
       
@@ -56,7 +56,34 @@ this option make update 3dcoin core & script update in your vps & always you can
       1.2.2. Not Same SSH Port and Password for all vps's:
       
              Eter your vps's data: 'Host:Password:SSHPort' ( Exemple: 111.111.111.111:ERdX5h64dSer:22-222.222.222.222:Wz65D232Fty:165-... )
+             
+**2. Update only Auto-update script:**
+-------------------------------------------------------------
+This option make update only scripts in your vps & always you can use a single update or multi update: 
 
+  **1.1-Update Single Masternode:**
+  
+    This option update only local vps where you run this shell.
+    
+  **1.2- Update Multi Masternode**
+  
+    This option update multi vps's and with 2 options to:
+    
+      1.2.1. Use Same SSH Port and Password for all vps's:
+      
+             Enter your vps ip's: (Exemple: 111.111.111.111-222.222.222.222-... )
+             
+             SSH port: (Exemple: 22 )
+             
+             password: (Exemple: Des53G2v3P )
+             
+      1.2.2. Not Same SSH Port and Password for all vps's:
+      
+             Eter your vps's data: 'Host:Password:SSHPort' ( Exemple: 111.111.111.111:ERdX5h64dSer:22-222.222.222.222:Wz65D232Fty:165-... )
+             
+**3. Exit:**
+-------------------------------------------------------------   
+This option to close Shell script. 
 
 
 
