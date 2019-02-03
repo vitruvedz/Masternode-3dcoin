@@ -17,7 +17,8 @@ if [ "$previousBlock" == "$currentBlock" ]; then
   rm -f /root/.3dcoin/banlist.dat
   rm -f /root/.3dcoin/mncache.dat
   rm -f /root/.3dcoin/mnpayments.dat
-  rm -f /root/.3dcoin/peers.dat
   rm -f /root/.3dcoin/netfulfilled.dat
+  rm -f /root/.3dcoin/debug.log
+  rm -f /root/.3dcoin/3dcoind.pid
   3dcoind -reindex
 fi
