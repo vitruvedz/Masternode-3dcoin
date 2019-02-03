@@ -84,6 +84,45 @@ Update_Masternode_And_Script_Single() {
 	cd ~
 	rm $latestrelease.tar.gz
 	rm -rf $file 
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=206.189.72.203") -eq 0 ]; then
+	echo "addnode=206.189.72.203" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=206.189.41.191") -eq 0 ]; then
+	echo "addnode=206.189.41.191" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=165.227.197.115") -eq 0 ]; then
+	echo "addnode=165.227.197.115" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=167.99.87.86") -eq 0 ]; then
+	echo "addnode=167.99.87.86" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.201.222") -eq 0 ]; then
+	echo "addnode=159.65.201.222" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.148.226") -eq 0 ]; then
+	echo "addnode=159.65.148.226" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=165.227.38.214") -eq 0 ]; then
+	echo "addnode=165.227.38.214" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.167.79") -eq 0 ]; then
+	echo "addnode=159.65.167.79" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.90.101") -eq 0 ]; then
+	echo "addnode=159.65.90.101" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=128.199.218.139") -eq 0 ]; then
+	echo "addnode=128.199.218.139" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=174.138.3.33") -eq 0 ]; then
+	echo "addnode=174.138.3.33" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.203.167.75") -eq 0 ]; then
+	echo "addnode=159.203.167.75" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=138.68.102.67") -eq 0 ]; then
+	echo "addnode=138.68.102.67" >> /root/.3dcoin/3dcoin.conf
+	fi	
 	reboot
 }
 Update_Masternode_And_Script_Multi() {
@@ -160,6 +199,45 @@ Update_Masternode_And_Script_Multi() {
 	cd ~
     rm $latestrelease.tar.gz
 	rm -rf $file 
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=206.189.72.203") -eq 0 ]; then
+	echo "addnode=206.189.72.203" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=206.189.41.191") -eq 0 ]; then
+	echo "addnode=206.189.41.191" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=165.227.197.115") -eq 0 ]; then
+	echo "addnode=165.227.197.115" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=167.99.87.86") -eq 0 ]; then
+	echo "addnode=167.99.87.86" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.201.222") -eq 0 ]; then
+	echo "addnode=159.65.201.222" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.148.226") -eq 0 ]; then
+	echo "addnode=159.65.148.226" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=165.227.38.214") -eq 0 ]; then
+	echo "addnode=165.227.38.214" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.167.79") -eq 0 ]; then
+	echo "addnode=159.65.167.79" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.90.101") -eq 0 ]; then
+	echo "addnode=159.65.90.101" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=128.199.218.139") -eq 0 ]; then
+	echo "addnode=128.199.218.139" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=174.138.3.33") -eq 0 ]; then
+	echo "addnode=174.138.3.33" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.203.167.75") -eq 0 ]; then
+	echo "addnode=159.203.167.75" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=138.68.102.67") -eq 0 ]; then
+	echo "addnode=138.68.102.67" >> /root/.3dcoin/3dcoin.conf
+	fi	
     reboot'
 }		
 
@@ -206,11 +284,50 @@ Update_Script_Single() {
 	echo  -e "${GREEN} Start Cron                        ${STD}"
 	sudo /etc/init.d/cron start
 	echo ""		
-	echo  -e "${GREEN} Update Finished                   ${STD}" 
+	echo  -e "${GREEN} Update Finished                   ${STD}"
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=206.189.72.203") -eq 0 ]; then
+	echo "addnode=206.189.72.203" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=206.189.41.191") -eq 0 ]; then
+	echo "addnode=206.189.41.191" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=165.227.197.115") -eq 0 ]; then
+	echo "addnode=165.227.197.115" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=167.99.87.86") -eq 0 ]; then
+	echo "addnode=167.99.87.86" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.201.222") -eq 0 ]; then
+	echo "addnode=159.65.201.222" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.148.226") -eq 0 ]; then
+	echo "addnode=159.65.148.226" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=165.227.38.214") -eq 0 ]; then
+	echo "addnode=165.227.38.214" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.167.79") -eq 0 ]; then
+	echo "addnode=159.65.167.79" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.90.101") -eq 0 ]; then
+	echo "addnode=159.65.90.101" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=128.199.218.139") -eq 0 ]; then
+	echo "addnode=128.199.218.139" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=174.138.3.33") -eq 0 ]; then
+	echo "addnode=174.138.3.33" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.203.167.75") -eq 0 ]; then
+	echo "addnode=159.203.167.75" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=138.68.102.67") -eq 0 ]; then
+	echo "addnode=138.68.102.67" >> /root/.3dcoin/3dcoin.conf
+	fi	
 	echo ""
 }	
 
-Update_Script_Single_Multi() {
+Update_Script_Multi() {
     sshpass -p $rootpass ssh -p$sshport -o StrictHostKeyChecking=no root@$ipserver '
     h=$(( RANDOM % 23 + 1 ));
 	rm -f /usr/local/bin/check.sh
@@ -257,7 +374,46 @@ Update_Script_Single_Multi() {
 	echo "-----------------------------------------------------"
 	echo  -e "${GREEN} Update Finished                   ${STD}" 
 	echo "-----------------------------------------------------"
-	echo ""'
+	echo ""
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=206.189.72.203") -eq 0 ]; then
+	echo "addnode=206.189.72.203" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=206.189.41.191") -eq 0 ]; then
+	echo "addnode=206.189.41.191" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=165.227.197.115") -eq 0 ]; then
+	echo "addnode=165.227.197.115" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=167.99.87.86") -eq 0 ]; then
+	echo "addnode=167.99.87.86" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.201.222") -eq 0 ]; then
+	echo "addnode=159.65.201.222" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.148.226") -eq 0 ]; then
+	echo "addnode=159.65.148.226" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=165.227.38.214") -eq 0 ]; then
+	echo "addnode=165.227.38.214" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.167.79") -eq 0 ]; then
+	echo "addnode=159.65.167.79" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.65.90.101") -eq 0 ]; then
+	echo "addnode=159.65.90.101" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=128.199.218.139") -eq 0 ]; then
+	echo "addnode=128.199.218.139" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=174.138.3.33") -eq 0 ]; then
+	echo "addnode=174.138.3.33" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=159.203.167.75") -eq 0 ]; then
+	echo "addnode=159.203.167.75" >> /root/.3dcoin/3dcoin.conf
+	fi
+	if [ $(cat /root/.3dcoin/3dcoin.conf | grep -c "addnode=138.68.102.67") -eq 0 ]; then
+	echo "addnode=138.68.102.67" >> /root/.3dcoin/3dcoin.conf
+	fi'
 }	
 
 read_options(){
@@ -401,7 +557,7 @@ read_options(){
 				do
 					echo  -e "${GREEN} Connexion Vps ip $ipserver               ${STD}"
 					echo ""
-					Update_Script_Single_Multi
+					Update_Script_Multi
 				done
 			elif [[ $REPLY =~ ^[Nn]$ ]]; then
 				sleep 2
@@ -424,7 +580,7 @@ read_options(){
 					then
 						echo -e "Please enter a correct vps's data ${RED}( Exemple: 111.111.111.111:ERdX5h64dSer:22 222.222.222.222:Wz65D232Fty:165 ... )${STD}"
 					else
-						Update_Script_Single_Multi
+						Update_Script_Multi
 					fi
 				done
 			else
