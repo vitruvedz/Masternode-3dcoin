@@ -11,5 +11,3 @@ rm -f UpdateNode.sh
 wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/UpdateNode.sh
 wget https://raw.githubusercontent.com/vitruvedz/Masternode-3dcoin/master/Masternode/Version
 chmod 755 UpdateNode.sh
-chmod 755 clearlog.sh
-
