@@ -10,13 +10,13 @@ dt=`date '+%d/%m/%Y %H:%M:%S'`
 latestrelease=$(curl --silent https://api.github.com/repos/BlockchainTechLLC/3dcoin/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
 localrelease=$(3dcoin-cli -version | awk -F' ' '{print $NF}' | cut -d "-" -f1)
 if [ -z "$latestrelease" ] || [ "$latestrelease" == "$localrelease" ]; then 
-echo > $LOGFILE
+echo >> $LOGFILE
 echo "[$dt]    ==============================================================" >> $LOGFILE
 echo "[$dt]==> Info: There is no New Update latest release is $latestrelease" >> $LOGFILE
 echo "[$dt]    ==============================================================" >> $LOGFILE
 exit;
 else
-echo > $LOGFILE
+echo >> $LOGFILE
 echo "[$dt]    ==============================================================" >> $LOGFILE
 echo "[$dt]==> Info: Starting Update 3DCoin core to $latestrelease" >> $LOGFILE
 echo "[$dt]    ==============================================================" >> $LOGFILE
